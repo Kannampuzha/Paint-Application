@@ -4,6 +4,7 @@ A simple paint application in python
 This is a simple Paint application made using python .
 
 ![Screenshort of app](https://github.com/Kannampuzha/Paint-Application/blob/master/Screenshot.png)
+![Canvas]
 
 
 
