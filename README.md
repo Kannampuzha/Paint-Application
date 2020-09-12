@@ -1,4 +1,4 @@
-# Paint-Apllication
+# Paint-Application
 A simple paint application in python
 
 This is a simple Paint application made using python .
