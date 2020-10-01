@@ -77,6 +77,7 @@ class main:
 
 
     def paint(self, e):
+        '''creates a canvas where you can paint'''
         if self.old_x and self.old_y:
             self.canvas.create_line(self.old_x, self.old_y, e.x, e.y, width=self.penwidth, fill=self.color_fg,
                                capstyle=ROUND, smooth=True)
@@ -84,23 +85,29 @@ class main:
         self.old_x = e.x
         self.old_y = e.y
 
-    def reset(self, e):  # reseting or cleaning the canvas
+    def reset(self, e):
+        '''reseting or cleaning the canvas'''
         self.old_x = None
         self.old_y = None
 
-    def changeW(self, e):  # change Width of pen through slider
+    def changeW(self, e):
+        '''change Width of pen through slider'''
         self.penwidth = e
 
-    def clear(self):      #clears the canvas
+    def clear(self):
+        '''clears the canvas'''
         self.canvas.delete(ALL)
 
     def change_colorblue(self):
+        '''change colour to blue'''
         self.color_fg='blue'
 
     def change_colorblack(self):
+        '''change colour to black'''
         self.color_fg='black'
 
     def change_colorred(self):
+        '''change colour to red'''
         self.color_fg='red'
 
     def change_colora(self):
@@ -112,13 +119,14 @@ class main:
     def change_colorc(self):
         self.color_fg='#009888'
 
-    def eraze(self):   #erazing stuff simply by changing colour of the brush to white
+    def eraze(self):
+        '''erazing stuff simply by changing colour of the brush to white'''
         self.color_fg='white'
 
 
     def save(self):
 
-        #Making values for a screenshort
+        '''Making values for a screenshort'''
         x = self.root.winfo_rootx() + self.canvas.winfo_x()
         #print(x)
         y = self.root.winfo_rooty() + self.canvas.winfo_y()
